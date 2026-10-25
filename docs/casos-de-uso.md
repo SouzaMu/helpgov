@@ -27,5 +27,7 @@
 ## UC05 — Enviar sugestão
 
 1. A pessoa informa nome, e-mail e mensagem sem dados previdenciários sensíveis.
-2. Cliente e servidor validam formato, tamanho e conteúdo mínimo.
-3. Se o ambiente PHP estiver configurado, a mensagem é registrada em área protegida; a interface comunica o resultado.
+2. O formulário valida formato e tamanho, bloqueia envios duplicados durante o processamento e envia os campos ao Netlify Forms, com proteção antispam.
+3. Na hospedagem Netlify, a mensagem é registrada em Forms no painel do projeto; a interface confirma o envio após uma resposta de sucesso. Em caso de falha, os campos são preservados para uma nova tentativa.
+
+Para testar após a publicação, envie uma mensagem completa com um e-mail real e confira as submissões do formulário `contato` no painel Netlify, incluindo a pasta de spam. Mensagens curtas de teste e endereços fictícios podem ser classificados como spam. Notificações por e-mail precisam ser configuradas em Forms > Submission notifications. O endpoint PHP permanece disponível apenas para integrações alternativas em hospedagens com PHP; o formulário publicado na Netlify não depende dele.
