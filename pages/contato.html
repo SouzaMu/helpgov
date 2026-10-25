@@ -10,12 +10,14 @@
   <main id="main-content">
     <section class="page-hero" aria-labelledby="contact-title"><div class="container"><p class="eyebrow">Fale conosco</p><h1 id="contact-title">Encontrou algo a melhorar?</h1><p>Envie sugestões sobre usabilidade, conteúdo ou algum código que precise de revisão.</p></div></section>
     <section class="section section--tight"><div class="container contact-grid">
-      <form id="contact-form" class="panel" novalidate>
+      <form id="contact-form" class="panel" name="contato" method="POST" action="/pages/contato" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contato">
+        <p hidden><label>Não preencha este campo: <input name="bot-field" autocomplete="off" tabindex="-1"></label></p>
         <h2>Mensagem</h2><p>Não envie NIT, CPF, documentos ou outros dados previdenciários sensíveis.</p>
         <div class="form-stack">
-          <div class="field"><label for="contact-name">Nome</label><input id="contact-name" class="input" name="nome" autocomplete="name" minlength="2" required><p class="help-text">Use ao menos 2 caracteres.</p></div>
-          <div class="field"><label for="contact-email">E-mail</label><input id="contact-email" class="input" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="contact-message">Mensagem</label><textarea id="contact-message" class="textarea" name="mensagem" rows="6" minlength="10" required></textarea><p class="help-text">Mínimo de 10 caracteres.</p></div>
+          <div class="field"><label for="contact-name">Nome</label><input id="contact-name" class="input" name="nome" autocomplete="name" minlength="2" maxlength="120" required><p class="help-text">Use ao menos 2 caracteres.</p></div>
+          <div class="field"><label for="contact-email">E-mail</label><input id="contact-email" class="input" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+          <div class="field"><label for="contact-message">Mensagem</label><textarea id="contact-message" class="textarea" name="mensagem" rows="6" minlength="10" maxlength="4000" required></textarea><p class="help-text">De 10 a 4.000 caracteres.</p></div>
           <button class="button" type="submit">Enviar mensagem</button><p id="contact-status" class="form-status" role="status"></p>
         </div>
       </form>
