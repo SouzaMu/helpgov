@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR" data-root="./">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulte códigos de contribuição previdenciária, regras, vencimentos e valores de referência do INSS.">
+  <title>HELPGOV — Códigos de contribuição do INSS</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="inicio">
+  <header id="site-header" class="site-header"></header>
+  <div id="announcements" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="home-title">
+      <div class="container hero__grid">
+        <div>
+          <p class="eyebrow">INSS · consulta orientativa</p>
+          <h1 id="home-title">Entenda seu código de contribuição.</h1>
+          <p class="lead">Busque por código, plano ou descrição. Veja alíquota, vencimento e regras de cada modalidade em uma linguagem clara.</p>
+          <a class="button" href="pages/codigo.html">Explorar todos os códigos <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+        <aside class="hero__aside" aria-label="Dados de referência">
+          <strong>Competência 01/2026</strong>
+          <p>Base atualizada com a tabela de contribuição mensal e a tabela de códigos de pagamento divulgadas pelo INSS.</p>
+          <div class="source-note"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><span>Confirme a sua situação e emita a guia pelos canais oficiais antes de pagar.</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="search-panel" aria-label="Busca rápida de códigos">
+      <form id="home-search-form" class="search-form" role="search">
+        <label class="sr-only" for="home-search">Código ou descrição</label>
+        <input id="home-search" class="input" type="search" autocomplete="off" placeholder="Ex.: 1007, facultativo, MEI ou plano simplificado" disabled>
+        <button id="home-search-button" class="button" type="submit" disabled>Buscar</button>
+      </form>
+      <p id="home-search-status" class="form-status" aria-live="polite"></p>
+    </section>
+
+    <section id="home-result-section" class="section section--tight" hidden aria-labelledby="home-result-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Busca inteligente</p><h2 id="home-result-title">Resultados</h2></div><p id="home-result-summary" aria-live="polite"></p></div>
+        <div id="home-results" class="code-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="numbers-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Referência oficial</p><h2 id="numbers-title">Números que ajudam na consulta</h2></div><p>Valores aplicáveis às contribuições a partir da competência de janeiro de 2026.</p></div>
+        <div class="stat-grid">
+          <div class="stat"><strong id="stat-codes">—</strong><span>códigos de pessoa física e complementação consultáveis</span></div>
+          <div class="stat"><strong id="stat-minimum">—</strong><span>salário mínimo usado nas alíquotas reduzidas</span></div>
+          <div class="stat"><strong id="stat-ceiling">—</strong><span>teto do salário de contribuição</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Mais consultados</p><h2 id="featured-title">Comece por aqui</h2></div><a class="button button--secondary button--small" href="pages/codigo.html">Ver tabela completa</a></div>
+        <div id="featured-codes" class="code-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">Feito para decidir melhor</p><h2 id="features-title">Menos burocracia, mais contexto.</h2></div></div>
+        <div class="feature-grid">
+          <article class="feature"><div class="feature__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></div><h3>Busca por intenção</h3><p>Pesquise o número, uma categoria ou termos como “rural”, “CadÚnico” e “simplificado”.</p></article>
+          <article class="feature"><div class="feature__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v17l-3-1.5-3 1.5-3-1.5-3 1.5Z"/><path d="M8 7h6m-6 4h6"/></svg></div><h3>Regras visíveis</h3><p>Alíquota, base, vencimento e limitações ficam reunidos na ficha de cada código.</p></article>
+          <article class="feature"><div class="feature__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 4-6"/></svg></div><h3>Simulação simples</h3><p>Estime o valor da contribuição sem substituir a geração oficial da GPS.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight"><div class="container"><div class="notice"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg><div><strong>Importante:</strong> este é um guia de consulta, não substitui a análise do seu caso nem a emissão oficial. Use o Meu INSS/SAL para confirmar categoria, competência, valores e acréscimos legais.</div></div></div></section>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+  <script defer src="assets/js/shared/utils.js"></script>
+  <script defer src="assets/js/shared/data.js"></script>
+  <script defer src="assets/js/shared/favorites.js"></script>
+  <script defer src="assets/js/shared/code-ui.js"></script>
+  <script defer src="assets/js/shared/app-shell.js"></script>
+  <script defer src="assets/js/pages/home.js"></script>
+</body>
+</html>

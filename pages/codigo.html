@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR" data-root="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulte a tabela de códigos de pagamento de contribuição previdenciária do INSS.">
+  <title>Códigos de contribuição INSS | HELPGOV</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="codigos">
+  <header id="site-header" class="site-header"></header>
+  <div id="announcements" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="catalog-title"><div class="container"><p class="eyebrow">Tabela de consulta</p><h1 id="catalog-title">Códigos de contribuição previdenciária.</h1><p>Encontre códigos por número, descrição ou categoria. A ficha detalhada mostra as condições e o vencimento informados pelas fontes oficiais.</p></div></section>
+    <section class="section section--tight"><div class="container">
+      <div id="code-detail" class="detail-panel" hidden></div>
+      <form class="filters" role="search" onsubmit="return false">
+        <div class="field"><label for="code-search">Buscar código ou descrição</label><input id="code-search" class="input" type="search" autocomplete="off" placeholder="Ex.: 1473, baixa renda ou complemento"></div>
+        <div class="field"><label for="category-filter">Categoria</label><select id="category-filter" class="select"><option value="all">Todas as categorias</option></select></div>
+        <button id="clear-filters" class="button button--secondary" type="button">Limpar filtros</button>
+        <p id="catalog-summary" class="filter-summary" aria-live="polite">Carregando códigos…</p>
+      </form>
+      <p id="catalog-status" class="form-status" aria-live="polite"></p>
+      <div id="code-grid" class="code-grid" aria-label="Lista de códigos"></div>
+    </div></section>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+  <script defer src="../assets/js/shared/utils.js"></script><script defer src="../assets/js/shared/data.js"></script><script defer src="../assets/js/shared/favorites.js"></script><script defer src="../assets/js/shared/code-ui.js"></script><script defer src="../assets/js/shared/app-shell.js"></script><script defer src="../assets/js/pages/catalog.js"></script>
+</body>
+</html>

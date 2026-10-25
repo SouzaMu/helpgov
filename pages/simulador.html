@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR" data-root="../">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simulador orientativo de contribuição previdenciária por código INSS.">
+  <title>Simulador de contribuição | HELPGOV</title><link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body data-page="simulador">
+  <header id="site-header" class="site-header"></header><div id="announcements" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="simulator-title"><div class="container"><p class="eyebrow">Cálculo de referência</p><h1 id="simulator-title">Simule sua contribuição.</h1><p>Escolha um código disponível e informe a base por competência. O resultado não inclui juros, multa ou particularidades do seu cadastro.</p></div></section>
+    <section class="section"><div class="container simulator-layout">
+      <form id="simulation-form" class="panel" novalidate>
+        <h2>Dados do cálculo</h2><p>Os limites e alíquotas são carregados da tabela vigente para janeiro de 2026.</p>
+        <div class="form-stack">
+          <div class="field"><label for="simulation-code">Código de pagamento</label><select id="simulation-code" class="select" required><option value="">Carregando opções…</option></select></div>
+          <div class="field"><label for="contribution-base">Base por competência (R$)</label><input id="contribution-base" class="input" type="number" min="0" step="0.01" inputmode="decimal" required><p id="base-help" class="help-text"></p><p id="simulation-error" class="field-error" aria-live="polite"></p></div>
+          <button class="button" type="submit">Atualizar simulação</button>
+        </div>
+      </form>
+      <section class="panel calculation" aria-live="polite" aria-labelledby="result-title">
+        <p class="eyebrow">Resultado estimado</p><h2 id="result-title">Valor da contribuição</h2><div id="simulation-amount" class="calculation__amount">—</div><p class="calculation__caption">por período selecionado</p>
+        <div class="calculation__rows"><div><span>Código</span><strong id="simulation-code-output">—</strong></div><div><span>Alíquota</span><strong id="simulation-rate-output">—</strong></div><div><span>Base</span><strong id="simulation-base-output">—</strong></div><div><span>Periodicidade</span><strong id="simulation-frequency-output">—</strong></div></div>
+        <div class="notice"><div><strong>Antes de pagar:</strong> confirme no SAL/Meu INSS se o código, a categoria e a base se aplicam ao seu caso. A simulação é informativa.</div></div>
+      </section>
+    </div></section>
+  </main>
+  <footer id="site-footer" class="site-footer"></footer>
+  <script defer src="../assets/js/shared/utils.js"></script><script defer src="../assets/js/shared/data.js"></script><script defer src="../assets/js/shared/app-shell.js"></script><script defer src="../assets/js/pages/simulator.js"></script>
+</body>
+</html>
